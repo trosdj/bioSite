@@ -35,9 +35,6 @@ main {
     margin-top: 100px;
 }
 
-
-/* nav style */
-
 header {
     background: var(--dark2);
     text-align: center;
@@ -281,7 +278,7 @@ div.card img {
   }
 
   .card p {
-    margin: 10px;
+    margin: 20px;
   }
 
   .center {
