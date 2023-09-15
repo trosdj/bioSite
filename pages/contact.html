@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="../stylesheet.css">
+</head>
+<body>
+    <header>
+        <nav class="nav-left">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+        <div class="logo-div"></div>
+        <h1 class="logo">Violets' Way</h1>
+        <nav class="nav-right">
+            <ul>
+                <li><a href="hobbies.html">Hobbies</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+            <h1 class="page-title">Contact Us</h1>
+            <section>
+                <div class="form">
+                    <form id="survey-form">
+                        <fieldset>
+                            <label id="name-label" for="name">Your Name: <input id="name" type="text" placeholder="Violet Trost" required></label>
+                            <label id="email-label" for="email">Your Email: <input id="email" type="email" placeholder="name@email.com" required></label>
+                            <label id="number-label" for="number">Your Age: <input id="number" type="number" min="13" max="100" placeholder="25"></label>
+                            <p>Have you contacted us before?</p>
+                            <label for="return-user"><input class="inline select" id="return-user" type="radio" value= "return" name="usertype"> Yes</label>
+                            <label for="new-user"><input class="inline select" id="new-user" type="radio" value="return" name="usertype"> No</label>
+                        </fieldset>
+                        <fieldset>
+                            <label id="subject-label" for="subject">Subject: <input id="subject" type="text" placeholder="Subject"></label>
+                            <label for="message">Provide your message:
+                                <textarea id="message" name="message" rows="3" cols="30" placeholder="Message Begins..."></textarea>
+                            </label>
+                        </fieldset>
+                        <input id="submit" type="submit" value="Submit" />
+                    </form>
+                </div>
+            </section>
+    </main>
+</body>
+</html>
