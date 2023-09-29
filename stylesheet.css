@@ -21,6 +21,10 @@ body {
     overflow-x: hidden;
 }
 
+.noScroll {
+    overflow: hidden;
+}
+
 h1, h2, h3, h4 {
     font-family: 'Playfair Display', sans-serif;
     font-weight: 800;
@@ -34,6 +38,8 @@ main {
     position: absolute;
     margin-top: 100px;
 }
+
+/* |- Header & Navigation -| */
 
 header {
     background: var(--dark2);
@@ -143,33 +149,48 @@ nav a:hover::before {
     transform: scale(1,1);
 }
 
+/* |- Landing Page -| */
+
 .hero {
-    height: auto;
+    background-image: url(images/street-sign.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    width: auto;
-    aspect-ratio: 16/5;
+    height: 100%;
+    width: 105%;
     text-align: right;
 }
 
+/* |- Rows and Columns -| */
+
 .row {
+    height: 100vh;
+    width: 105vw;
     display: flex;
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
+    justify-content: left;
 }
 
 div.col-1 {
-    flex: 0 0 8%;
-    max-width: 8%;
-    display: flexbox;
-    justify-content: center;
+    flex: 0 0 10%;
+    max-width: 10%;
 }
 
 .col-2 {
     flex: 0 0 40%;
     max-width: 40%;
+}
+
+.col-2.landing-1 {
+    flex: 0 0 40%;
+    max-width: 20%;
+}
+
+.col-2.landing-2 {
+    flex: 0 0 60%;
+    max-width: 60%;
 }
 
 .col-2 h1{
@@ -182,9 +203,9 @@ div.col-1 {
 }
 
 .col-2 p {
-    padding-top: 2.5em;
     padding-left: 1em;
-    text-align: left;
+    text-align: right;
+    justify-content: center;
 }
 
 h2 {
@@ -199,18 +220,12 @@ h2 {
     display: inline-flex;
 }
 
-footer {
-    background: var(--dark2);
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 50px;
-}
-
 .portrait {
+    border-radius: 25px;
     margin-top: 10px;
-    width: 450px;
-    height: auto;
+    width: auto;
+    height: 560px;
+    box-shadow: 0 4px 8px 0 rgba(10, 2, 24, 0.2);
 }
 
 div.pic {
@@ -218,28 +233,8 @@ div.pic {
     justify-content: right;
 }
 
-.about p {
-    padding-left: 15px;
-    padding-top: 0;
-    text-align: left;
-}
-
-.about h1 {
-    margin-bottom: 0;
-    padding-left: 15px;
-    text-align: left;
-}
-
-img.square {
-    object-fit: cover;
-    margin-top: 5px;
-    margin-left: 35px;
-    width: 200px;
-    height: 200px;
-}
-
 img.img-1 {
-    margin-top: 25px;
+    margin-top: 10px;
 }
 
 div.hobby-cards {
@@ -258,6 +253,7 @@ div.hobby-cards {
     margin: 10px;
   }
 
+
 .card:hover {
     background-color: var(--dark2);
     color: var(--light2)
@@ -271,40 +267,40 @@ div.card img {
     border-radius: 50%;
     margin-left: 100px;
     box-shadow: 0 4px 8px 0 rgba(10, 2, 24, 0.2);
-  }
+}
 
-  .card h3 {
+.card h3 {
     text-align: center;
-  }
+}
 
-  .card p {
+.card p {
     margin: 20px;
-  }
+}
 
-  .center {
+.center {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
-  }
+}
 
-  button {
+button {
     background-color: var(--light1);
     color: var(--dark1);
     padding: 5px;
     border: 0;
-  }
+}
 
-  button a {
+button a {
     text-decoration: none;
-  }
+}
 
-  button:hover {
+button:hover {
     background-color: var(--dark2);
     color: var(--light2);
-  }
+}
 
-  .logo-div {
+.logo-div {
     background-color: var(--dark2);
     border-radius: 50%;
     width: 150px;
@@ -312,8 +308,8 @@ div.card img {
     position: absolute;
     left: 45%;
     top: -25px;
-    z-index: -999;
-  }
+    z-index: -998;
+}
 
 .card a {
     text-decoration: none;
@@ -457,4 +453,60 @@ input[type="submit"] {
 input[type="submit"]:active {
     background-color: var(--dark2);
     color: var(--light1);
+}
+
+#hidden {
+    opacity: 0;
+}
+
+.card-about::-webkit-scrollbar {
+    display: none;
+  }
+
+.card-about {
+    background-color: var(--light1);
+    height: 560px;
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(10, 2, 24, 0.2);
+    transition: 0.3s;
+    border-radius: 25px;
+    margin: 10px;
+    padding: 10px 20px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow: scroll;
+    }
+
+    
+div.card-about img {
+    object-fit: cover;
+    margin: 5px 10px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px 0 rgba(10, 2, 24, 0.2);
+}
+
+div.card-about figure {
+    display: flex;
+    justify-content: center;
+}
+
+.card-about h1 {
+    margin-bottom: 0;
+    padding-left: 15px;
+    text-align: left;
+    line-height: 50px;
+    margin: 20px;
+}
+
+.card-about p {
+    padding-left: 15px;
+    padding-top: 0;
+    text-align: left;
+    margin: 20px;
+}
+
+.dropShadow {
+    box-shadow: 0 4px 8px 0 rgba(10, 2, 24, 0.2);
 }
